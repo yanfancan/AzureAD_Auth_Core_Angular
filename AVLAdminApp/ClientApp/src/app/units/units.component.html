@@ -1,0 +1,87 @@
+<div style="padding: 2em">
+  <h2>Devices</h2>
+
+  <nav class="navbar">
+    <!--<input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="filter">-->
+  </nav>
+
+  <table class="values">
+    <tr>
+      <th> Id </th>
+      <th> Address</th>
+      <th> UnitID</th>
+      <th> Vehicle Name</th>
+      <th> Sevice Type</th>
+      <th> Service ID</th>
+      <th> Delete</th>
+    </tr>
+    <!-- rows with input for the initial array of objects passed from the Database -->
+    <tr *ngFor="let value of values | filter:filter | paginate: { itemsPerPage: 10, currentPage: p }; index as i">
+      <td style="text-align: center">{{value.id}}</td>
+      <td>
+        <input [(ngModel)]="value.address" class="form-control" type="number" name="{{value.address}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.vehicleId" class="form-control" type="number" name="{{value.vehicleId}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.vehicleName" class="form-control" type="text" name="{{value.vehicleName}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.deviceType" class="form-control" type="number" name="{{value.deviceType}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.serviceId" class="form-control" type="number" name="{{value.serviceId}}" />
+      </td>
+      <td> <button id="delete-user" class="btn btn-lg btn-danger btn-block" (click)="deleteRow(i)"> delete </button></td>
+    </tr>
+
+    <!-- row with input for records that have just been added -->
+    <tr *ngFor="let value of newRecords; index as i">
+      <td style="text-align: center">TBD</td>
+      <td>
+        <input [(ngModel)]="value.address" class="form-control" type="number" name="{{value.address}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.vehicleId" class="form-control" type="number" name="{{value.vehicleId}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.vehicleName" class="form-control" type="text" name="{{value.vehicleName}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.deviceType" class="form-control" type="number" name="{{value.deviceType}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="value.serviceId" class="form-control" type="number" name="{{value.serviceId}}" />
+      </td>
+      <td> <button id="delete-new" class="btn btn-lg btn-danger btn-block" (click)="deleteNew(i)"> delete </button></td>
+    </tr>
+
+    <!-- row with input for a new record -->
+    <tr>
+      <td style="text-align: center">TBD</td>
+      <td>
+        <input [(ngModel)]="dboDevice.address" class="form-control" type="number" name="{{dboDevice.address}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="dboDevice.vehicleId" class="form-control" type="number" name="{{dboDevice.vehicleId}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="dboDevice.vehicleName" class="form-control" type="text" name="{{dboDevice.vehicleName}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="dboDevice.deviceType" class="form-control" type="number" name="{{dboDevice.deviceType}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="dboDevice.serviceId" class="form-control" type="number" name="{{dboDevice.serviceId}}" />
+      </td>
+      <td> <button id="delete-user" class="btn btn-lg btn-success btn-block" (click)="addRow()"> add user </button></td>
+    </tr>
+  </table>
+
+  <div id="below-table">
+    <button id="save" class="btn btn-lg btn-primary btn-block" (click)="save()"> save </button>
+    <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+  </div>
+
+</div>

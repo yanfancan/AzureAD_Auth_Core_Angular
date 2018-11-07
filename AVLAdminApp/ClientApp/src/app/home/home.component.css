@@ -1,0 +1,63 @@
+/* HeroesComponent's private CSS styles */
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+
+.values {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+  .values li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+
+    .values li.selected:hover {
+      background-color: #BBD8DC !important;
+      color: white;
+    }
+
+    .values li:hover {
+      color: #607D8B;
+      background-color: #DDD;
+      left: .1em;
+    }
+
+  .values .text {
+    position: relative;
+    top: -3px;
+  }
+
+  .values .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+.top-card {
+  height: 7em;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.bottom-card {
+  
+  padding: 1em;
+}

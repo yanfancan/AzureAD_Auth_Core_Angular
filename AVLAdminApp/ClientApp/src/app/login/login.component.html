@@ -1,0 +1,25 @@
+<!-- login html -->
+
+<div style="margin:auto" class="login-container">
+  <form name="form" (ngSubmit)="login()" #f="ngForm">
+    <h1 style="text-align:center; padding:30px"> Login </h1>
+
+    <label for="username" class="sr-only">Username</label>
+    <input type="text" name="username" class="form-control" placeholder="Email" [(ngModel)]="model.username" required />
+
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="model.password" required />
+
+    <br *ngIf="failedAuth">
+    <p *ngIf="failedAuth" style="color: red; text-align: center">Authentification failed</p>
+
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+  
+</div>
+
+
+
+
+

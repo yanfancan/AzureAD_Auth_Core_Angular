@@ -1,0 +1,2 @@
+﻿//Genereate AVLDataTypes.cs
+xsd AVLDataTypes.xsd /o:../Types /n:HSC.RTD.AVLAggregatorCore /c

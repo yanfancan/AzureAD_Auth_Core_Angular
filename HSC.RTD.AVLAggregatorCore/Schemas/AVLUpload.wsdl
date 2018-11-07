@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Created with Liquid Studio 2018 (https://www.liquid-technologies.com)-->
+<wsdl:definitions targetNamespace="http://mohltc.on.ca/xmlns/avl"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:s="http://www.w3.org/2001/XMLSchema"
+                  xmlns:tns="http://mohltc.on.ca/xmlns/avl"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+                  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"                 
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:types>
+        <s:schema elementFormDefault="qualified"
+                  targetNamespace="http://mohltc.on.ca/xmlns/avl">
+            <s:element name="ExportData">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0"
+                                   maxOccurs="1"
+                                   name="MessageXml"
+                                   type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ExportDataResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0"
+                                   maxOccurs="1"
+                                   name="ExportDataResult"
+                                   type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="ExportDataSoapIn">
+        <wsdl:part name="parameters"
+                   element="tns:ExportData" />
+    </wsdl:message>
+    <wsdl:message name="ExportDataSoapOut">
+        <wsdl:part name="parameters"
+                   element="tns:ExportDataResponse" />
+    </wsdl:message>
+    <wsdl:portType name="ExportSoap">
+        <wsdl:operation name="ExportData">
+            <wsdl:input message="tns:ExportDataSoapIn" />
+            <wsdl:output message="tns:ExportDataSoapOut" />
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ExportSoap12"
+                  type="tns:ExportSoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="ExportData">
+            <soap12:operation soapActionRequired="false" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Export">
+        <wsdl:port name="ExportSoap12"
+                   binding="tns:ExportSoap12">
+            <soap12:address location="http://localhost:51075/AVLUploadService.svc" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

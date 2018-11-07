@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AVLDataTypes>
+  <LoginRequestType>
+    <Message>
+      <Header>
+        <MessageID>0</MessageID>
+        <SessionID>0</SessionID>
+      </Header>
+      <Body>
+        <LoginRequest>
+          <CustomerName>interfleet</CustomerName>
+          <Password>gps</Password>
+          <ClientIP>154.107.34.268</ClientIP>
+          <TimeZone>Canada Central Standard Time</TimeZone>
+        </LoginRequest>
+      </Body>
+    </Message>
+  </LoginRequestType>
+  <LoginResponseType>
+    <Message>
+      <Header>
+        <MessageID>101</MessageID>
+        <SessionID>27</SessionID>
+        <ServerDateTime>2009-03-24 11:14:00 -04:00</ServerDateTime >
+      </Header>
+      <Body>
+        <LoginResponse>
+          <Status>True</Status>
+          <Description>Success</Description>
+          <Interval >10</Interval>
+        </LoginResponse>
+      </Body>
+    </Message>
+  </LoginResponseType>
+  <LogoutRequestType>
+    <Message>
+      <Header>
+        <MessageID>101</MessageID>
+        <SessionID>27</SessionID>
+      </Header>
+      <Body>
+        <LogoutRequest>
+          <CustomerName>interfleet</CustomerName>
+          <ClientIP>154.107.34.268</ClientIP>
+        </LogoutRequest>
+      </Body>
+    </Message>
+  </LogoutRequestType>
+  <LogoutResponseType>
+    <Message>
+      <Header>
+        <MessageID>101</MessageID>
+        <SessionID>101</SessionID>
+      </Header>
+      <Body>
+        <LogoutResponse>
+          <Status>True</Status>
+          <Description>Success</Description>
+        </LogoutResponse >
+      </Body>
+    </Message>
+  </LogoutResponseType>
+  <LastPositionRequestType>
+    <Message>
+      <Header>
+        <MessageID>101</MessageID>
+        <SessionID>27</SessionID>
+      </Header>
+      <Body>
+        <LastPositionRequest/>
+      </Body>
+    </Message>
+  </LastPositionRequestType>
+  <LastPositionResponseType>
+    <Message>
+      <Header>
+        <MessageID>101</MessageID>
+        <SessionID>27</SessionID>
+      </Header>
+      <Body>
+        <LastPositionResponse>
+          <Status>True</Status>
+          <Description>Success</Description>
+          <VehicleList>
+            <Vehicle ID="1192">
+              <VehicleName>4100</VehicleName>
+              <Latitude>45.3765</Latitude>
+              <Longitude>-75.7352</Longitude>
+              <Datum>NAD83</Datum>
+              <DateTime>9/19/2003 2:30:43 PM</DateTime>
+              <Speed>2</Speed>
+              <Bearing>239</Bearing>
+            </Vehicle>
+            <Vehicle ID="1180">
+              <VehicleName>4101</VehicleName>
+              <Latitude>45.464</Latitude>
+              <Longitude>-75.5505</Longitude>
+              <Datum>NAD83</Datum>
+              <DateTime>9/19/2003 2:38:36 PM</DateTime>
+              <Speed>26</Speed>
+              <Bearing>179</Bearing>
+            </Vehicle>
+          </VehicleList>
+        </LastPositionResponse>
+      </Body>
+    </Message>
+  </LastPositionResponseType>
+  <ExportDataRequestType>
+    <Message>
+      <Header>
+        <MessageID>101</MessageID>
+        <SessionID>27</SessionID>
+      </Header>
+      <Body>
+        <ExportDataRequest>
+          <Reports>
+            <Report Address="15723066" Longitude="-78.6116" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2004 1:13:43 AM"/>
+            <Report Address="15723067" Longitude="-78.6116" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2004 1:13:43 AM"/>
+          </Reports>
+        </ExportDataRequest>
+      </Body>
+    </Message>
+  </ExportDataRequestType>
+</AVLDataTypes>

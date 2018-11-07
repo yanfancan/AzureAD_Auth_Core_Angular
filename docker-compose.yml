@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hsc.rtd.avlaggregator:
+    image: ${DOCKER_REGISTRY}hscrtdavlaggregator
+    build:
+      context: .\HSC.RTD.AVLAggregator
+      dockerfile: Dockerfile

@@ -1,0 +1,21 @@
+<section style="background-color: #d0d0d0;">
+  <div style="width: 15%; float: left; padding-bottom:10px; padding-top: 10px">
+    <img style="width: 100%;" src="http://pgaf.ca/assets/images/ontario-ministry-of-health-and-long-term-care-logo.png" title="Ontario Ministry of Health &amp; Long-Term Care">
+  </div>
+  <div style="width: 70%; float: left; padding-bottom:10px; padding-top: 10px;">
+    <h1 id="title" style="width: 100%; text-align:center">AVL AGGREGATOR</h1>
+    <h1 id="title" style="margin:0px; width: 100%; text-align:center">administration</h1>
+  </div>
+  <div style="width: 15%; float: left; padding-bottom:10px; padding-top: 10px; padding-right: 10px">
+    <p style="text-align:right; margin: 1em;">{{currentUser}}</p>
+    <button *ngIf="isSignedIn" id="sign-out" class="btn btn-lg btn-primary btn-block" (click)="signoutButton()">Sign Out</button>
+
+    <button *ngIf="!isSignedIn" id="sign-in" class="btn btn-lg btn-primary btn-block" (click)="signinButton()">Sign In</button>
+  </div>
+</section>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
+

@@ -1,0 +1,18 @@
+<div style="padding: 2em">
+  <h2>Values</h2>
+  <h3>Vehicle Locations</h3>
+  <table class="values">
+    <tr>
+      <th> ID </th>
+      <th> Address</th>
+      <th> Latidtude</th>
+      <th> Longitude</th>
+    </tr>
+    <tr *ngFor="let value of values">
+      <td> {{value.id}} </td>
+      <td> {{value.address}} </td>
+      <td> {{value.latitude}} </td>
+      <td> {{value.longitude}} </td>
+    </tr>
+  </table>
+</div>

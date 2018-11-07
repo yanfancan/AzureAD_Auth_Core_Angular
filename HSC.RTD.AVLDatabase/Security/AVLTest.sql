@@ -1,0 +1,2 @@
+﻿CREATE USER [AVLTest] FOR LOGIN [AVLTest];
+

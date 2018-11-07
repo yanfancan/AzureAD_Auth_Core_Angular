@@ -1,0 +1,136 @@
+<ngb-tabset #t="ngbTabset">
+  <ngb-tab id="home">
+    <ng-template ngbTabTitle> <b>Home</b></ng-template>
+    <ng-template ngbTabContent>
+      <div style="padding: 2em;">
+        <h2>Home</h2>
+        <div style="max-width: 80%">
+          <!-- Card 1 -->
+          <div class="card" (click)="t.select('serviceAccounts')" style="width: 20%; color: white; background-color: #ffa764; float: left; margin-right: 1em;">
+            <div class="top-card">
+              <h3>Maintian AVL Service Accounts</h3>
+            </div>
+            <div class="bottom-card" style="background-color: #db8e52;">
+              <p>view more</p>
+            </div>
+          </div>
+          <!-- Units Card -->
+          <div (click)="t.select('values')" class="card" style="width: 20%; color: white; background-color: #f22f49; float: left; margin-right: 1em;">
+            <div class="top-card">
+              <h3>Maintian Unit Mapping       </h3>
+            </div>
+            <div class="bottom-card" style="background-color: #d1263a;">
+              <p>view more</p>
+            </div>
+          </div>
+          <!-- User Card -->
+          <div (click)="t.select('users')" class="card" style="width: 20%; color: white; background-color: #5b4fc4; float: left; margin-right: 1em;">
+            <div class="top-card">
+              <h3>Maintian User Accounts</h3>
+            </div>
+            <div class="bottom-card" style="background-color: #49409e;">
+              <p>view more</p>
+            </div>
+          </div>
+          <!-- Reports Card -->
+          <div (click)="t.select('reports')" class="card" style="width: 20%; color: white; background-color: #37a897; float: left; margin-right: 1em;">
+            <div class="top-card">
+              <h3>Reports</h3>
+            </div>
+            <div class="bottom-card" style="background-color: #2e8a7b;">
+              <p>view more</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="card" style="width: 20%; color: white; background-color: #35a3d6; float: left; margin-top: 1em">
+            <div class="top-card">
+              <h3>Connection stats       </h3>
+            </div>
+            <div class="bottom-card" style="background-color: #2a87b2">
+              <p>view more</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Units" id="values">
+    <ng-template ngbTabContent>
+      <app-units></app-units>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab id="users">
+    <ng-template ngbTabTitle>Users</ng-template>
+    <ng-template ngbTabContent>
+      <app-users></app-users>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Service Accounts" id="serviceAccounts">
+    <ng-template ngbTabContent>
+      <app-service-accounts></app-service-accounts>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Map Services" id="mapServices">
+    <ng-template ngbTabContent>
+      <app-map-services></app-map-services>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+
+
+<nav>
+  <a routerLink="/service-accounts" routerLinkActive="active">
+    <div class="card" style="width: 20%; color: white; background-color: #ffa764; float: left; margin-right: 1em;">
+      <div class="top-card">
+        <h3>Maintian AVL Service Accounts</h3>
+      </div>
+      <div class="bottom-card" style="background-color: #db8e52;">
+        <p>view more</p>
+      </div>
+    </div>
+  </a>
+  <a routerLink="/units" routerLinkActive="active">
+    <div  class="card" style="width: 20%; color: white; background-color: #f22f49; float: left; margin-right: 1em;">
+      <div class="top-card">
+        <h3>Maintian Unit Mapping       </h3>
+      </div>
+      <div class="bottom-card" style="background-color: #d1263a;">
+        <p>view more</p>
+      </div>
+    </div>
+  </a>
+  <a routerLink="/users" routerLinkActive="active">
+    <div class="card" style="width: 20%; color: white; background-color: #5b4fc4; float: left; margin-right: 1em;">
+      <div class="top-card">
+        <h3>Maintian User Accounts</h3>
+      </div>
+      <div class="bottom-card" style="background-color: #49409e;">
+        <p>view more</p>
+      </div>
+    </div>
+  </a>
+  <a routerLink="/reports" routerLinkActive="active">
+    <div  class="card" style="width: 20%; color: white; background-color: #37a897; float: left; margin-right: 1em;">
+      <div class="top-card">
+        <h3>Reports</h3>
+      </div>
+      <div class="bottom-card" style="background-color: #2e8a7b;">
+        <p>view more</p>
+      </div>
+    </div>
+  </a>
+  <a routerLink="/connectionstats" routerLinkActive="active">
+    <div class="card" style="width: 20%; color: white; background-color: #35a3d6; float: left; margin-top: 1em">
+      <div class="top-card">
+        <h3>Connection stats</h3>
+      </div>
+      <div class="bottom-card" style="background-color: #2a87b2">
+        <p>view more</p>
+      </div>
+    </div>
+  </a>
+ 
+</nav>
+
+

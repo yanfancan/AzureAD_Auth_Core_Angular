@@ -1,0 +1,56 @@
+<!--<select [(ngModel)]="dboUser.accessLevel" class="form-control" type="text" name="{{dboUser.accessLevel}}">
+  <option value="1">Administrator</option>
+  <option value="2">User</option>
+</select>-->
+
+<div style="margin: 5vw; width: 100%; display: inline-block">
+
+  <h4>Select a service</h4>
+  <select [(ngModel)]="selectedService" class="form-control" name="{{selectedService}}" (change)="getLists()" id="selectService">
+    <option disabled selected value> -- select an option -- </option>
+    <option *ngFor="let service of services" [ngValue]="service">{{service.serviceName}}</option>
+  </select>
+
+
+  <div class="SAlist">
+    <h3> Service Accounts</h3>
+    <ul>
+      <li *ngFor="let sa of withoutService" (click)="select(sa)">{{sa.loginName}}</li>
+    </ul>
+  </div>
+
+  <div style="float: left; margin-right: 5vw">
+    <button class="btn btn-lg btn-primary btn-block" (click)="addAccount()" style="font-size: 30px; margin-top: 10px"> &#xbb; </button>
+    <button class="btn btn-lg btn-primary btn-block" (click)="removeAccount()" style="font-size: 30px; margin-top: 10px"> &#xab; </button>
+  </div>
+
+  <div class="SAlist">
+    <h3> Linked Service Accounts</h3>
+    <ul>
+      <li *ngFor="let sa of withService" (click)="select(sa)">{{sa.loginName}}</li>
+    </ul>
+  </div>
+</div>
+<button id="save" class="btn btn-lg btn-primary btn-block" (click)="save()"> save </button>
+
+
+
+<!--<ngb-accordion #acc="ngbAccordion" *ngFor="let serviceAccount of serviceAccounts; index as i">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span >&#9661; <b>{{serviceAccount.id}}</b> {{serviceAccount.loginName}}</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <div class="container" style="margin-top: 0px; margin-left: 0px;">
+        <div *ngFor="let service of services">
+          <input style="float: left; margin-right: 5px" type="checkbox" checked="{{hasService(serviceAccount, service)}}" (change)="onCheck($event, serviceAccount, service)" />
+          <p style="float: left; margin-right: 15px">{{service.serviceName}}</p>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+<div id="below-table">
+  <button id="save" class="btn btn-lg btn-primary btn-block" (click)="save()"> save </button>
+</div>-->

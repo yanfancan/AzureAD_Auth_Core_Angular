@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2af04575-f0e0-4a72-a142-0ebcb877fbec" created="2.3.0" activeEnvironment="Default environment" name="AVL_Aggregator_V1" resourceRoot="" updated="2.3.0 2018-03-06T16:28:42Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d289f1f1-8380-45cb-9c78-0d460dc98a3c" wsaVersion="NONE" name="CustomBinding_IAvlAggregatorService" type="wsdl" bindingName="{http://tempuri.org/}CustomBinding_IAvlAggregatorService" soapVersion="1_2" anonymous="optional" definition="http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?wsdl"><con:part><con:url>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="AvlAggregatorService" targetNamespace="http://mohltc.on.ca/xmlns/avl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://mohltc.on.ca/xmlns/avl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://tempuri.org/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:import namespace="http://tempuri.org/" location="http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?wsdl=wsdl0"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://mohltc.on.ca/xmlns/avl/Imports">
+      <xsd:import schemaLocation="http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?xsd=xsd0" namespace="http://mohltc.on.ca/xmlns/avl"/>
+      <xsd:import schemaLocation="http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAvlAggregatorService_LastPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:LastPosition"/>
+  </wsdl:message>
+  <wsdl:message name="IAvlAggregatorService_LastPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LastPositionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAvlAggregatorService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login"/>
+  </wsdl:message>
+  <wsdl:message name="IAvlAggregatorService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAvlAggregatorService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout"/>
+  </wsdl:message>
+  <wsdl:message name="IAvlAggregatorService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAvlAggregatorService_ExportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportData"/>
+  </wsdl:message>
+  <wsdl:message name="IAvlAggregatorService_ExportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportDataResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IAvlAggregatorService">
+    <wsdl:operation name="LastPosition">
+      <wsdl:input wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LastPosition" message="tns:IAvlAggregatorService_LastPosition_InputMessage"/>
+      <wsdl:output wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LastPositionResponse" message="tns:IAvlAggregatorService_LastPosition_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Login" message="tns:IAvlAggregatorService_Login_InputMessage"/>
+      <wsdl:output wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LoginResponse" message="tns:IAvlAggregatorService_Login_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Logout" message="tns:IAvlAggregatorService_Logout_InputMessage"/>
+      <wsdl:output wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LogoutResponse" message="tns:IAvlAggregatorService_Logout_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ExportData">
+      <wsdl:input wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/ExportData" message="tns:IAvlAggregatorService_ExportData_InputMessage"/>
+      <wsdl:output wsaw:Action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/ExportDataResponse" message="tns:IAvlAggregatorService_ExportData_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="AvlAggregatorService">
+    <wsdl:port name="CustomBinding_IAvlAggregatorService" binding="i0:CustomBinding_IAvlAggregatorService">
+      <soap12:address location="http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://mohltc.on.ca/xmlns/avl" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:import namespace="http://mohltc.on.ca/xmlns/avl" location="http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?wsdl"/>
+  <wsdl:types/>
+  <wsdl:binding name="CustomBinding_IAvlAggregatorService" type="i0:IAvlAggregatorService">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="LastPosition">
+      <soap12:operation soapAction="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LastPosition" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Login" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Logout" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportData">
+      <soap12:operation soapAction="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/ExportData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://mohltc.on.ca/xmlns/avl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://mohltc.on.ca/xmlns/avl">
+  <xs:element name="LastPosition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MessageXml" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastPositionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LastPositionResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MessageXml" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MessageXml" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogoutResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MessageXml" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExportDataResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:endpoint>https://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint></con:endpoints><con:operation id="5813e2b1-9b60-4396-9f1e-883dbd4b8db6" isOneWay="false" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/ExportData" name="ExportData" bindingOperationName="ExportData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="17feb2cf-740e-4e1c-b58e-c811d0eed15e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:avl="http://mohltc.on.ca/xmlns/avl">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <avl:ExportData>\r
+         <!--Optional:-->\r
+         <avl:MessageXml>?</avl:MessageXml>\r
+      </avl:ExportData>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/ExportData"/></con:call></con:operation><con:operation id="0ece0f69-94c3-4a97-a448-d3050e1283ee" isOneWay="false" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LastPosition" name="LastPosition" bindingOperationName="LastPosition" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="418b0f82-d193-4d13-a8c3-77eab97da215" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:avl="http://mohltc.on.ca/xmlns/avl">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <avl:LastPosition>\r
+         <!--Optional:-->\r
+         <avl:MessageXml>?</avl:MessageXml>\r
+      </avl:LastPosition>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LastPosition"/></con:call></con:operation><con:operation id="a59ff6a5-e46a-4d26-a2f1-2c0a019b1338" isOneWay="false" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Login" name="Login" bindingOperationName="Login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="df78de11-a6d8-4d73-8534-6379eb4ac453" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:avl="http://mohltc.on.ca/xmlns/avl">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <avl:Login>\r
+         <!--Optional:-->\r
+         <avl:MessageXml>?</avl:MessageXml>\r
+      </avl:Login>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Login"/></con:call></con:operation><con:operation id="598db755-5fac-4c7a-bc52-91200113fdff" isOneWay="false" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Logout" name="Logout" bindingOperationName="Logout" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b4035003-1f9a-45eb-9229-35aaf3aab2d7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:avl="http://mohltc.on.ca/xmlns/avl">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <avl:Logout>\r
+         <!--Optional:-->\r
+         <avl:MessageXml>?</avl:MessageXml>\r
+      </avl:Logout>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Logout"/></con:call></con:operation></con:interface><con:testSuite id="63998d8b-99a8-45b2-87f8-83d39e5945b1" name="CustomBinding_IAvlAggregatorService TestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="3cf65124-6f6e-4be2-9046-765ab10a65f6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ExportData TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="0b4628aa-6877-4639-a234-cd0a9197b7dd" name="ExportData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomBinding_IAvlAggregatorService</con:interface><con:operation>ExportData</con:operation><con:request name="ExportData" id="4cbb1c6c-a242-4acf-8370-7fc5712d840d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avl="http://mohltc.on.ca/xmlns/avl">
+   <soap:Header/>
+   <soap:Body>
+      <avl:ExportData>
+         <avl:MessageXml><![CDATA[<Message>
+         <Header><MessageID>101</MessageID><SessionID>1</SessionID></Header><Body>
+			<ExportDataRequest>
+			<Reports>
+			<Report Address="2945900" Longitude="-78.6000" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			<Report Address="2945901" Longitude="-78.6010" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			<Report Address="2945902" Longitude="-78.6020" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			<Report Address="2945903" Longitude="-78.6030" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			<Report Address="2945904" Longitude="-78.6040" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			<Report Address="2945905" Longitude="-78.6050" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			<Report Address="2945906" Longitude="-78.6060" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			<Report Address="2945907" Longitude="-78.6070" Latitude="43.9159" Velocity="20" Direction="228" Date="8/9/2018 1:13:43 AM"/>
+			</Reports>
+			</ExportDataRequest>
+			</Body>
+			</Message>
+			]]]]>><![CDATA[</avl:MessageXml>
+      </avl:ExportData>
+
+
+
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/ExportData" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="b3f30def-061c-4bbf-9a81-16e7a08ba44d" name="LoadTest ExportData"><con:settings><con:setting id="hasBeenConvertedToLoadUITest">true</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval><con:reportParameters/></con:loadTest><con:properties/><con:reportParameters/></con:testCase><con:testCase id="d676f292-a202-46d5-9f8b-86e2b8acdfaf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="LastPosition TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="b0a4fcd8-c3eb-4b6a-8959-d1c336fd97ae" name="LastPosition"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomBinding_IAvlAggregatorService</con:interface><con:operation>LastPosition</con:operation><con:request name="LastPosition" id="efebe339-ec36-4578-bd2f-9c87ca097188"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avl="http://mohltc.on.ca/xmlns/avl">
+   <soap:Header/>\r
+   <soap:Body>\r
+      <avl:LastPosition>
+         <avl:MessageXml><![CDATA[<Message>
+         <Header>
+         <MessageID>101</MessageID>
+         <SessionID>2</SessionID>
+         </Header>
+         <Body>
+         <LastPositionRequest/>
+         </Body>
+         </Message>]]]]>><![CDATA[</avl:MessageXml>
+      </avl:LastPosition>
+
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/LastPosition" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="e94b502b-5797-4b0e-95aa-4a4c39de26a9" name="LoadTest LastPosition"><con:settings><con:setting id="hasBeenConvertedToLoadUITest">true</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval><con:reportParameters/></con:loadTest><con:properties/><con:reportParameters/></con:testCase><con:testCase id="1526235b-c666-4756-8428-0c811fd445a9" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Login TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="23ea6f23-c2cd-4fcb-b692-e51b1cd51e16" name="Login"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomBinding_IAvlAggregatorService</con:interface><con:operation>Login</con:operation><con:request name="Login" id="dddb544e-b585-4854-aa4d-8917e0bdd723"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avl="http://mohltc.on.ca/xmlns/avl">
+   <soap:Header/>
+   <soap:Body>
+      <avl:Login>
+
+         <avl:MessageXml><![CDATA[
+         <Message>
+			<Header>
+			<MessageID>0</MessageID>
+			<SessionID>0</SessionID>
+			</Header>
+			<Body>
+			<LoginRequest>
+			<CustomerName>provider</CustomerName>
+			<Password>gps</Password>
+			<ClientIP>154.107.34.268</ClientIP>
+			<TimeZone>Canada Central Standard Time</TimeZone>
+			</LoginRequest>
+			</Body>
+			</Message>
+         ]]]]>><![CDATA[</avl:MessageXml>
+
+
+
+      </avl:Login>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Login" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="9070ae7c-9aa6-4cd4-b22b-5ce0655a9a81" name="LoadTest Login"><con:settings><con:setting id="hasBeenConvertedToLoadUITest">true</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval><con:reportParameters/></con:loadTest><con:properties/><con:reportParameters/></con:testCase><con:testCase id="d1d80ef7-cc39-4fa7-ad04-bb54ef27bc8b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Logout TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="7e2dd6a8-05c4-4517-9489-f91b40825416" name="Logout"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CustomBinding_IAvlAggregatorService</con:interface><con:operation>Logout</con:operation><con:request name="Logout" id="fec90f77-9290-4cfe-ba0c-6c3d68ed8e42"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://avlaggregatorservice.azurewebsites.net/AvlAggregatorService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avl="http://mohltc.on.ca/xmlns/avl">
+   <soap:Header/>\r
+   <soap:Body>\r
+      <avl:Logout>\r
+
+
+         <avl:MessageXml>
+         <![CDATA[<Message>
+		<Header>
+			<MessageID>1</MessageID>
+			<SessionID>6</SessionID>
+		</Header>
+		<Body>
+			<LogoutRequest>
+				<CustomerName>provider</CustomerName>
+				<ClientIP>154.107.34.268</ClientIP>
+			</LogoutRequest>
+		</Body>
+	</Message>]]]]>><![CDATA[
+         </avl:MessageXml>
+
+      </avl:Logout>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://mohltc.on.ca/xmlns/avl/IAvlAggregatorService/Logout" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="69a130f2-2eb0-4653-afa7-510f5bfea4ae" name="LoadTest Logout"><con:settings><con:setting id="hasBeenConvertedToLoadUITest">true</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval><con:reportParameters/></con:loadTest><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/><con:loadUiTest name="LoadTest ExportData" id="12fa2c0d-523b-4f78-a5c0-5bbfb138cd59"><con:settings><con:setting id="soapUIObjectSourceId">3cf65124-6f6e-4be2-9046-765ab10a65f6</con:setting><con:setting id="convertedFromLoadTestModelItemId">b3f30def-061c-4bbf-9a81-16e7a08ba44d</con:setting></con:settings><con1:loadui-project id="baeb5953-4606-408c-a3d7-8ed4c157823a" label="LoadTest ExportData" xmlns:con1="http://eviware.com/loadui/config"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/><con1:property propagates="true" key="Temporary project" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property><con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:scene label="New Scenario" id="7bb24e39-3f59-421b-8d2d-a24eb1786a5e" version="1"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property><con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="f5acc9b3-eec6-4972-8015-9f542a17511e" category="Scheduler"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property><con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property><con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="c46b86b0-e7f7-41b3-bfd7-abfee73a4a45" category="Generators"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="limitVU" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="CustomBinding_IAvlAggregatorService TestSuite:ExportData TestCase" id="0a2f472c-eee2-42de-9d49-5f20424bec7b" category="Runners"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property><con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/><con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">3cf65124-6f6e-4be2-9046-765ab10a65f6</con1:property><con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property><con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property></con1:attributes><con1:addons/></con1:component><con1:connection outputTerminalId="f5acc9b3-eec6-4972-8015-9f542a17511e/outgoingTerminal" inputTerminalId="c46b86b0-e7f7-41b3-bfd7-abfee73a4a45/stateTerminal"/><con1:connection outputTerminalId="c46b86b0-e7f7-41b3-bfd7-abfee73a4a45/triggerTerminal" inputTerminalId="0a2f472c-eee2-42de-9d49-5f20424bec7b/triggerTerminal"/><con1:connection outputTerminalId="0a2f472c-eee2-42de-9d49-5f20424bec7b/runningTerminal" inputTerminalId="c46b86b0-e7f7-41b3-bfd7-abfee73a4a45/Sample Count"/></con1:scene><con1:statistics><con1:page title="DefaultLoadUIStatisticPage"/></con1:statistics></con1:loadui-project><con:loadUITestScenario projectId="baeb5953-4606-408c-a3d7-8ed4c157823a" scenarioId="7bb24e39-3f59-421b-8d2d-a24eb1786a5e" name="New Scenario" id="3c07fef5-0229-4ca2-853b-5d9e6f3b30e0"><con:settings/></con:loadUITestScenario><con:setupScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:teardownScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:reportParameters/></con:loadUiTest><con:loadUiTest name="LoadTest LastPosition" id="ab02d61b-ae31-4a5a-8d4c-89e3de848005"><con:settings><con:setting id="soapUIObjectSourceId">d676f292-a202-46d5-9f8b-86e2b8acdfaf</con:setting><con:setting id="convertedFromLoadTestModelItemId">e94b502b-5797-4b0e-95aa-4a4c39de26a9</con:setting></con:settings><con1:loadui-project id="b6b428b4-6394-4e82-9c60-2699a206f30a" label="LoadTest LastPosition" xmlns:con1="http://eviware.com/loadui/config"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/><con1:property propagates="true" key="Temporary project" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property><con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:scene label="New Scenario" id="8ab8d911-82d5-4e45-98f3-fe404b663c13" version="1"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property><con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="aa79781e-fc90-4f1d-b4b3-9b2f171186dd" category="Scheduler"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property><con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property><con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="734e2662-9f9e-43f7-8652-ead300fe3c51" category="Generators"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="limitVU" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="CustomBinding_IAvlAggregatorService TestSuite:LastPosition TestCase" id="d1ba71ad-3feb-4bdd-8588-f2e6f1828df6" category="Runners"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property><con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/><con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">d676f292-a202-46d5-9f8b-86e2b8acdfaf</con1:property><con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property><con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property></con1:attributes><con1:addons/></con1:component><con1:connection outputTerminalId="aa79781e-fc90-4f1d-b4b3-9b2f171186dd/outgoingTerminal" inputTerminalId="734e2662-9f9e-43f7-8652-ead300fe3c51/stateTerminal"/><con1:connection outputTerminalId="734e2662-9f9e-43f7-8652-ead300fe3c51/triggerTerminal" inputTerminalId="d1ba71ad-3feb-4bdd-8588-f2e6f1828df6/triggerTerminal"/><con1:connection outputTerminalId="d1ba71ad-3feb-4bdd-8588-f2e6f1828df6/runningTerminal" inputTerminalId="734e2662-9f9e-43f7-8652-ead300fe3c51/Sample Count"/></con1:scene><con1:statistics><con1:page title="DefaultLoadUIStatisticPage"/></con1:statistics></con1:loadui-project><con:loadUITestScenario projectId="b6b428b4-6394-4e82-9c60-2699a206f30a" scenarioId="8ab8d911-82d5-4e45-98f3-fe404b663c13" name="New Scenario" id="3a662549-9d33-4efe-9d38-b88846582e2f"><con:settings/></con:loadUITestScenario><con:setupScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:teardownScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:reportParameters/></con:loadUiTest><con:loadUiTest name="LoadTest Login" id="e0914c2c-70ee-4c29-9b4e-aeb9eb90dc1e"><con:settings><con:setting id="soapUIObjectSourceId">1526235b-c666-4756-8428-0c811fd445a9</con:setting><con:setting id="convertedFromLoadTestModelItemId">9070ae7c-9aa6-4cd4-b22b-5ce0655a9a81</con:setting></con:settings><con1:loadui-project id="78dfec5e-b43c-463a-a035-714b4f5f3edf" label="LoadTest Login" xmlns:con1="http://eviware.com/loadui/config"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/><con1:property propagates="true" key="Temporary project" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property><con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:scene label="New Scenario" id="d2b075bf-0759-4a79-99a5-6129468aa444" version="1"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property><con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="618e75a2-98fa-43db-a9b7-271f93f12c88" category="Scheduler"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property><con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property><con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="6480eced-e060-47f2-a9f7-f3d71737ba8b" category="Generators"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="limitVU" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="CustomBinding_IAvlAggregatorService TestSuite:Login TestCase" id="6b978625-e236-4629-9276-2a0a1d91d45b" category="Runners"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property><con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/><con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">1526235b-c666-4756-8428-0c811fd445a9</con1:property><con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property><con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property></con1:attributes><con1:addons/></con1:component><con1:connection outputTerminalId="618e75a2-98fa-43db-a9b7-271f93f12c88/outgoingTerminal" inputTerminalId="6480eced-e060-47f2-a9f7-f3d71737ba8b/stateTerminal"/><con1:connection outputTerminalId="6480eced-e060-47f2-a9f7-f3d71737ba8b/triggerTerminal" inputTerminalId="6b978625-e236-4629-9276-2a0a1d91d45b/triggerTerminal"/><con1:connection outputTerminalId="6b978625-e236-4629-9276-2a0a1d91d45b/runningTerminal" inputTerminalId="6480eced-e060-47f2-a9f7-f3d71737ba8b/Sample Count"/></con1:scene><con1:statistics><con1:page title="DefaultLoadUIStatisticPage"><con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors"><con1:attributes><con1:property key="GroupId">dd540552-685c-451e-8651-ca219477f0e6</con1:property></con1:attributes></con1:chartGroup></con1:page></con1:statistics></con1:loadui-project><con:loadUITestScenario projectId="78dfec5e-b43c-463a-a035-714b4f5f3edf" scenarioId="d2b075bf-0759-4a79-99a5-6129468aa444" name="New Scenario" id="3ef3c353-50a9-402f-b046-96d6f5dc2844"><con:settings/></con:loadUITestScenario><con:loadUIPanelData id="c2779fe4-622f-4a06-9343-b6ac3a5bd6ea"><con:panel>Log</con:panel><con:data><con:paramName>column_width@Timestamp</con:paramName><con:paramValue>84</con:paramValue></con:data><con:data><con:paramName>column_visible@Timestamp</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@ID</con:paramName><con:paramValue>74</con:paramValue></con:data><con:data><con:paramName>column_visible@ID</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@Test step status</con:paramName><con:paramValue>120</con:paramValue></con:data><con:data><con:paramName>column_visible@Test step status</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@TriggerTimestamp</con:paramName><con:paramValue>84</con:paramValue></con:data><con:data><con:paramName>column_visible@TriggerTimestamp</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@TimeTaken</con:paramName><con:paramValue>115</con:paramValue></con:data><con:data><con:paramName>column_visible@TimeTaken</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@_wait_time_</con:paramName><con:paramValue>106</con:paramValue></con:data><con:data><con:paramName>column_visible@_wait_time_</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@Bytes</con:paramName><con:paramValue>52</con:paramValue></con:data><con:data><con:paramName>column_visible@Bytes</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@HTTP Status</con:paramName><con:paramValue>90</con:paramValue></con:data><con:data><con:paramName>column_visible@HTTP Status</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@CurrentlyRunning</con:paramName><con:paramValue>75</con:paramValue></con:data><con:data><con:paramName>column_visible@CurrentlyRunning</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@Request</con:paramName><con:paramValue>67</con:paramValue></con:data><con:data><con:paramName>column_visible@Request</con:paramName><con:paramValue>false</con:paramValue></con:data><con:data><con:paramName>column_width@Response</con:paramName><con:paramValue>77</con:paramValue></con:data><con:data><con:paramName>column_visible@Response</con:paramName><con:paramValue>false</con:paramValue></con:data></con:loadUIPanelData><con:setupScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:teardownScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:reportParameters/></con:loadUiTest><con:loadUiTest name="LoadTest Logout" id="572f4efb-31ae-44af-bd20-6177f56beda3"><con:settings><con:setting id="soapUIObjectSourceId">d1d80ef7-cc39-4fa7-ad04-bb54ef27bc8b</con:setting><con:setting id="convertedFromLoadTestModelItemId">69a130f2-2eb0-4653-afa7-510f5bfea4ae</con:setting></con:settings><con1:loadui-project id="b7a245e8-1c77-41ee-872d-24db1995745c" label="LoadTest Logout" xmlns:con1="http://eviware.com/loadui/config"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/><con1:property propagates="true" key="Temporary project" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property><con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:scene label="New Scenario" id="dd3d7645-60f6-4775-91e7-67a6e21a1cfc" version="1"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property><con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property></con1:properties><con1:attributes><con1:property key="limits">Time=60;</con1:property></con1:attributes><con1:addons/><con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="b59bc351-7786-4556-9a26-d09c30a27fcc" category="Scheduler"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property><con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property><con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="349ecc67-6b97-4cde-9d59-ff3e5d660307" category="Generators"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="limitVU" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="CustomBinding_IAvlAggregatorService TestSuite:Logout TestCase" id="0355af64-82c8-48e2-b4db-9f83cea69371" category="Runners"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property><con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/><con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">d1d80ef7-cc39-4fa7-ad04-bb54ef27bc8b</con1:property><con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property><con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property></con1:attributes><con1:addons/></con1:component><con1:connection outputTerminalId="b59bc351-7786-4556-9a26-d09c30a27fcc/outgoingTerminal" inputTerminalId="349ecc67-6b97-4cde-9d59-ff3e5d660307/stateTerminal"/><con1:connection outputTerminalId="349ecc67-6b97-4cde-9d59-ff3e5d660307/triggerTerminal" inputTerminalId="0355af64-82c8-48e2-b4db-9f83cea69371/triggerTerminal"/><con1:connection outputTerminalId="0355af64-82c8-48e2-b4db-9f83cea69371/runningTerminal" inputTerminalId="349ecc67-6b97-4cde-9d59-ff3e5d660307/Sample Count"/></con1:scene><con1:statistics><con1:page title="DefaultLoadUIStatisticPage"/></con1:statistics></con1:loadui-project><con:loadUITestScenario projectId="b7a245e8-1c77-41ee-872d-24db1995745c" scenarioId="dd3d7645-60f6-4775-91e7-67a6e21a1cfc" name="New Scenario" id="506474e6-b9e8-444e-b38a-6ea907277bac"><con:settings/></con:loadUITestScenario><con:setupScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:teardownScript xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:reportParameters/></con:loadUiTest><con:tags/></con:soapui-project>
