@@ -1,0 +1,40 @@
+App setup:
+http://www.digital-moves.eu/2018/07/19/authentication-with-azure-ad-angular-6-client-web-api/
+
+IIS setup:
+https://blog.angularindepth.com/deploy-an-angular-application-to-iis-60a0897742e7
+Here is a quick overview of what is covered in this article:
+
+Install IIS with the URL Rewrite Module.
+
+CD commandline to the dir of the physical folder of "AVLAdminApp", run the following: 
+    ng build --base-href "/[subfolder]/" --prod
+It will generate build under wwwroot folder.
+
+Go to default IIS web site, cretae a web app with name "subfolder", so the Angular app will use "http://root/[subfolder]/index.html".
+
+However, we aren’t home yet. If you try to refresh the page, by hitting F5 for example, you will get an error. That’s because our web server is getting Angular Router URLs that it isn’t set up to handle. So, we need to add some configuration that tells our web server how to fallback to our index.html page so the Angular Router can handle those URLs for us.
+
+In our project in toh\src we need to create a web.config file with the following content:
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+
+<system.webServer>
+  <rewrite>
+    <rules>
+      <rule name="Angular Routes" stopProcessing="true">
+        <match url=".*" />
+        <conditions logicalGrouping="MatchAll">
+          <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+          <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+        </conditions>
+        <action type="Rewrite" url="./index.html" />
+      </rule>
+    </rules>
+  </rewrite>
+</system.webServer>
+
+</configuration>
+
+
+Use a web.config file to leverage the Angular Router when deploying to a sub-folder in IIS.
