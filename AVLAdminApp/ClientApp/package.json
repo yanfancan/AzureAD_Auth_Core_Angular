@@ -26,6 +26,7 @@
     "core-js": "^2.5.4",
     "ng2-search-filter": "^0.4.7",
     "ngx-cookie-service": "^1.0.10",
+    "ngx-envconfig": "^1.2.1",
     "ngx-pagination": "^3.2.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"

@@ -1,4 +1,6 @@
+
 export const environment = {
+  state: 'production',
   production: true,
   apiURLRoot: "http://on34c02211293.cihs.ad.gov.on.ca:2888",
   adalConfig: {

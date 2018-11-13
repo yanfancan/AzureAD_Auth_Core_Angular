@@ -1,0 +1,18 @@
+{
+  "production": false,
+  "apiURLRoot": "http://localhost:44386",
+  "HOST_API": "http://localhost:4438",
+  "API_ENDPOINTS": {
+    "USER": "/api/v1/user"
+  },
+  "adalConfig": {
+    "tenant": "cddc1229-ac2a-4b97-b78a-0e5cacb5865c",
+    "clientId": "537384c0-62b9-44bc-948c-199410793e33",
+    "redirectUri": "http://localhost:44386/auth-callback",
+    "postLogoutRedirectUri": "http://localhost:44386/signedout",
+    "endpoints": {
+      "http://localhost:44386": "537384c0-62b9-44bc-948c-199410793e33"
+    },
+    "anonymousEndpoints": [ "assets/" ]
+  }
+}

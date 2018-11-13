@@ -3,6 +3,7 @@ import { ShareService } from './_services/share.service';
 import { AdalService } from 'adal-angular4';
 import { Router } from '@angular/router';
 import { environment } from '../environments/environment';
+import { ConfigService } from 'ngx-envconfig';
 
 
 @Component({
@@ -22,9 +23,12 @@ export class AppComponent implements OnInit {
   constructor(
     private adal: AdalService,
     private router: Router,
-    private shareService: ShareService
+    private shareService: ShareService,
+    private configService: ConfigService
   ) {
 
+    console.log("in AppComponent ... " + this.configService.getApi("USER"));
+    console.log("in AppComponent ... env= " + this.configService.getEnv());
     this.adal.init(this.adalConfig);
     this.shareService.UserInfo.subscribe(
       u => {

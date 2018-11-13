@@ -1,0 +1,18 @@
+{
+  "production": false,
+  "apiURLRoot": "http://localhost:44386",
+  "HOST_API": "http://on34c02211293.cihs.ad.gov.on.ca:2888",
+  "API_ENDPOINTS": {
+    "USER": "/api/v1/user"
+  },
+  "adalConfig": {
+    "tenant": "cddc1229-ac2a-4b97-b78a-0e5cacb5865c",
+    "clientId": "49a46b72-d4c3-4481-a8bc-d1da537fa284",
+    "redirectUri": "http://localhost:44386/auth-callback",
+    "postLogoutRedirectUri": "http://localhost:44386/signedout",
+    "endpoints": {
+      "http://localhost:44386": "537384c0-62b9-44bc-948c-199410793e33"
+    },
+    "anonymousEndpoints": [ "assets/" ]
+  }
+}
